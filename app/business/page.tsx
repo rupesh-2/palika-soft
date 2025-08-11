@@ -251,27 +251,27 @@ export default function BusinessRegistration() {
     <div className="min-h-screen bg-gray-50">
       <SidebarNavigation />
 
-      <div className="md:ml-64 p-4 md:p-8">
+      <div className="md:ml-64 p-3 sm:p-4 md:p-6 lg:p-8">
         {/* Header */}
-        <div className="mb-8 mt-12 md:mt-0 flex justify-between items-center">
+        <div className="mb-6 sm:mb-8 mt-16 sm:mt-12 md:mt-0 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-[#1F4E79] mb-2">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#1F4E79] mb-2">
               {language === "en" ? "Business Registration" : "व्यवसाय दर्ता"}
             </h1>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-sm sm:text-base">
               {language === "en"
                 ? "Online registration and renewal system for local businesses"
                 : "स्थानीय व्यवसायहरूको लागि अनलाइन दर्ता र नवीकरण प्रणाली"}
             </p>
           </div>
-          <Button variant="outline" size="sm" onClick={() => setLanguage(language === "en" ? "np" : "en")}>
-            <Globe className="h-4 w-4 mr-2" />
+          <Button variant="outline" size="sm" onClick={() => setLanguage(language === "en" ? "np" : "en")} className="text-xs sm:text-sm">
+            <Globe className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
             {language === "en" ? "नेपाली" : "English"}
           </Button>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-4">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4 sm:space-y-6">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 text-xs sm:text-sm">
             <TabsTrigger value="register">{language === "en" ? "New Registration" : "नयाँ दर्ता"}</TabsTrigger>
             <TabsTrigger value="status">{language === "en" ? "Application Status" : "आवेदन स्थिति"}</TabsTrigger>
             <TabsTrigger value="database">{language === "en" ? "Business Database" : "व्यवसाय डाटाबेस"}</TabsTrigger>
