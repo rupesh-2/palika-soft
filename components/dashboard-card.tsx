@@ -35,18 +35,18 @@ export function DashboardCard({
 }: DashboardCardProps) {
   return (
     <Card className="hover:shadow-lg transition-shadow duration-200 border-l-4 border-l-[#FFC107]">
-      <CardHeader className="pb-2 sm:pb-3">
+      <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="p-1.5 sm:p-2 bg-[#1F4E79] rounded-lg">
-              <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+          <div className="flex items-center space-x-3">
+            <div className="p-2 bg-[#1F4E79] rounded-lg">
+              <Icon className="h-6 w-6 text-white" />
             </div>
             <div>
-              <CardTitle className="text-sm sm:text-base md:text-lg text-[#1F4E79]">
+              <CardTitle className="text-lg text-[#1F4E79]">
                 {language === "en" ? title : titleNp}
               </CardTitle>
               {stats && (
-                <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#FFC107] mt-1">
+                <div className="text-2xl font-bold text-[#FFC107] mt-1">
                   {stats.value}
                 </div>
               )}
@@ -55,16 +55,16 @@ export function DashboardCard({
         </div>
       </CardHeader>
       <CardContent className="pt-0">
-        <CardDescription className="text-gray-600 mb-3 sm:mb-4 text-xs sm:text-sm">
+        <CardDescription className="text-gray-600 mb-4">
           {language === "en" ? description : descriptionNp}
         </CardDescription>
         {stats && (
-          <p className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">
+          <p className="text-sm text-gray-500 mb-4">
             {language === "en" ? stats.label : stats.labelNp}
           </p>
         )}
         <Button
-          className="w-full bg-[#1F4E79] hover:bg-[#1F4E79]/90 text-white text-xs sm:text-sm h-8 sm:h-10"
+          className="w-full bg-[#1F4E79] hover:bg-[#1F4E79]/90 text-white"
           asChild
         >
           <a href={href}>

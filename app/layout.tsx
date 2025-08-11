@@ -15,16 +15,6 @@ export const metadata: Metadata = {
   description:
     "Municipal management system for local government bodies in Nepal",
   generator: "v0.dev",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
-  themeColor: "#1F4E79",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "Palika Municipal",
-  },
-  formatDetection: {
-    telephone: false,
-  },
 };
 
 export default function RootLayout({

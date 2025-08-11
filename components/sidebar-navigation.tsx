@@ -73,7 +73,7 @@ export function SidebarNavigation() {
       <Button
         variant="outline"
         size="icon"
-        className="fixed top-3 left-3 z-50 md:hidden bg-white shadow-md border-gray-200"
+        className="fixed top-4 left-4 z-50 md:hidden bg-white shadow-md"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -81,17 +81,17 @@ export function SidebarNavigation() {
 
       {/* Sidebar */}
       <div
-        className={`fixed left-0 top-0 h-full w-64 sm:w-72 bg-[#1F4E79] text-white transform transition-transform duration-300 ease-in-out z-40 ${
+        className={`fixed left-0 top-0 h-full w-64 bg-[#1F4E79] text-white transform transition-transform duration-300 ease-in-out z-40 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >
-        <div className="p-4 sm:p-6">
+        <div className="p-6">
           {/* Header */}
-          <div className="mb-6 sm:mb-8">
-            <h1 className="text-lg sm:text-xl font-bold mb-2">
+          <div className="mb-8">
+            <h1 className="text-xl font-bold mb-2">
               {language === "en" ? "Palika Municipal" : "पालिका नगरपालिका"}
             </h1>
-            <p className="text-blue-200 text-xs sm:text-sm">
+            <p className="text-blue-200 text-sm">
               {language === "en" ? "Management System" : "व्यवस्थापन प्रणाली"}
             </p>
           </div>

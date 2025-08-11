@@ -154,14 +154,14 @@ export default function Dashboard() {
       <SidebarNavigation />
 
       {/* Main Content */}
-      <div className="md:ml-64 p-3 sm:p-4 md:p-6 lg:p-8">
-        <div className="mb-6 sm:mb-8 mt-16 sm:mt-12 md:mt-0">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4 sm:mb-6">
-            <div className="mb-4 lg:mb-0">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1F4E79] mb-2">
+      <div className="md:ml-64 p-4 md:p-8">
+        <div className="mb-8 mt-12 md:mt-0">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+            <div>
+              <h1 className="text-4xl font-bold text-[#1F4E79] mb-2">
                 {language === "en" ? "Municipal Dashboard" : "नगरपालिका ड्यासबोर्ड"}
               </h1>
-              <p className="text-gray-600 text-sm sm:text-base md:text-lg">
+              <p className="text-gray-600 text-lg">
                 {language === "en"
                   ? "Welcome back! Here's what's happening in your municipality today."
                   : "फिर्ता स्वागत छ! आज तपाईंको नगरपालिकामा के भइरहेको छ।"}
@@ -170,19 +170,19 @@ export default function Dashboard() {
 
             {/* Weather Widget */}
             <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white border-0">
-              <CardContent className="p-3 sm:p-4">
-                <div className="flex items-center space-x-2 sm:space-x-3">
-                  <Sun className="h-6 w-6 sm:h-8 sm:w-8" />
+              <CardContent className="p-4">
+                <div className="flex items-center space-x-3">
+                  <Sun className="h-8 w-8" />
                   <div>
-                    <p className="text-xs sm:text-sm opacity-90">{language === "en" ? "Kathmandu" : "काठमाडौं"}</p>
-                    <p className="text-lg sm:text-xl md:text-2xl font-bold">24°C</p>
+                    <p className="text-sm opacity-90">{language === "en" ? "Kathmandu" : "काठमाडौं"}</p>
+                    <p className="text-2xl font-bold">24°C</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+          <div className="flex flex-wrap gap-3 mb-6">
             <Button className="bg-[#1F4E79] hover:bg-[#1F4E79]/90">
               <Plus className="h-4 w-4 mr-2" />
               {language === "en" ? "New Application" : "नयाँ आवेदन"}
@@ -204,7 +204,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <Card className="bg-gradient-to-r from-[#1F4E79] to-[#2563eb] text-white border-0 shadow-lg">
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium flex items-center justify-between">
@@ -276,7 +276,7 @@ export default function Dashboard() {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* Revenue Chart */}
           <Card className="shadow-lg border-0">
             <CardHeader>
@@ -336,7 +336,7 @@ export default function Dashboard() {
         </div>
 
         {/* Module Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {dashboardModules.map((module, index) => (
             <DashboardCard
               key={index}
@@ -352,7 +352,7 @@ export default function Dashboard() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Recent Activity */}
           <Card className="shadow-lg border-0">
             <CardHeader>
