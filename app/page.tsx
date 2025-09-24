@@ -169,7 +169,7 @@ export default function Dashboard() {
             </div>
 
             {/* Weather Widget */}
-            <Card className="bg-gradient-to-r from-blue-500 to-blue-600 text-white border-0">
+            <Card className="mt-4 md:mt-0 bg-gradient-to-r from-blue-500 to-blue-600 text-white border-0">
               <CardContent className="p-4">
                 <div className="flex items-center space-x-3">
                   <Sun className="h-8 w-8" />
@@ -336,7 +336,7 @@ export default function Dashboard() {
         </div>
 
         {/* Module Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {dashboardModules.map((module, index) => (
             <DashboardCard
               key={index}
