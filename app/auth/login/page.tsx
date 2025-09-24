@@ -29,7 +29,7 @@ export default function LoginPage() {
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Building2 className="h-8 w-8 text-[#1F4E79]" />
             <h1 className="text-2xl font-bold text-[#1F4E79]">
-              {language === "en" ? "Palika Municipal" : "पालिका नगरपालिका"}
+              {language === "en" ? "Belbari Municipality" : "बेलबारी नगरपालिका"}
             </h1>
           </div>
           <p className="text-gray-600">{language === "en" ? "Management System" : "व्यवस्थापन प्रणाली"}</p>
@@ -168,8 +168,8 @@ export default function LoginPage() {
         <div className="text-center text-xs text-gray-500">
           <p>
             {language === "en"
-              ? "© 2024 Palika Municipal Management System. All rights reserved."
-              : "© २०२४ पालिका नगरपालिका व्यवस्थापन प्रणाली। सबै अधिकार सुरक्षित।"}
+              ? "© 2025 Belbari Municipality Management System. All rights reserved."
+              : "© २०२५ बेलबारी नगरपालिका व्यवस्थापन प्रणाली। सबै अधिकार सुरक्षित।"}
           </p>
         </div>
       </div>
